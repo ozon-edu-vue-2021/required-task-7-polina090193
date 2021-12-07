@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,33 +9,42 @@
   <link rel="stylesheet" href="./css/style.css">
   <title>Тестовое задание</title>
 </head>
+
 <body>
   <div id="container">
-    <div class="list-view">
+    <div class="list-view shown">
       <ul class="contacts-list">
-        <li>
-          <strong>Павел</strong>
-        </li>
+        <template id="contact">
+          <li class="contacts-list__item">
+            <strong>Неизвестный</strong>
+          </li>
+        </template>
       </ul>
     </div>
     <div class="details-view">
-      <div class="back"></div>
-      <div class="background"></div>
-      <div><ul>
-        <li class="people-title">Друзья</li>
-        <li><i class="fa fa-male"></i><span >Иван</span></li>
-        <li><i class="fa fa-male"></i><span >Максим</span></li>
-        <li><i class="fa fa-male"></i><span >Марат</span></li>
-        <li class="people-title">Не в друзьях</li>
-        <li><i class="fa fa-male"></i><span >Вася</span></li>
-        <li><i class="fa fa-male"></i><span >Кирилл</span></li>
-        <li><i class="fa fa-male"></i><span >Степан</span></li>
-        <li class="people-title">Популярные люди</li>
-        <li><i class="fa fa-male"></i><span >Елена</span></li>
-        <li><i class="fa fa-male"></i><span >Оля</span></li>
-        <li><i class="fa fa-male"></i><span >Никита</span></li>
-      </ul></div>
+      <div class="details__background">
+        <div class="details__back"></div>
+        <img src="./i/default-img.png" alt="No photo" class="details__avatar">
+        <strong>Павел</strong>
+      </div>
+      <template id="person">
+        <li>
+          <i class="fa fa-male"></i>
+          <span>Неизвестный</span>
+        </li>
+      </template>
+      <div>
+        <ul>
+          <li class="friends people-title">
+            <span class="friends">Друзья</span>
+          </li>
+          <li class="strangers people-title">Не в друзьях</li>
+          <li class="popular people-title">Популярные люди</li>
+        </ul>
+      </div>
     </div>
   </div>
+  <script src="js/script.js"></script>
 </body>
+
 </html>
